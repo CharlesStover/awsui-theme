@@ -1,3 +1,2 @@
-export default function App(): void {
-  return;
-}
+export { default } from './components/awsui-theme';
+export { default as Theme } from './types/theme';
