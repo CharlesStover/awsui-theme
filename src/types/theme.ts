@@ -21,6 +21,7 @@ export default interface Theme {
   backgroundNotificationBlue?: string;
   backgroundNotificationGreen?: string;
   backgroundNotificationRed?: string;
+  backgroundPopover?: string;
   backgroundStatusError?: string;
   backgroundStatusInfo?: string;
   backgroundStatusSuccess?: string;

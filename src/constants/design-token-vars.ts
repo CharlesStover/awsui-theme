@@ -82,6 +82,7 @@ export const backgroundLayoutPanelContentVar =
   '--color-background-layout-panel-content-3ogOy8';
 export const backgroundLayoutPanelHoverVar =
   '--color-background-layout-panel-hover-p5fVsz';
+export const backgroundPopoverVar = '--color-background-popover-2k-l2Z';
 export const borderButtonNormalDefaultVar =
   '--color-border-button-normal-default-3MrzkF';
 export const borderButtonNormalHoverVar =
