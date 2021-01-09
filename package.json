@@ -1,6 +1,6 @@
 {
   "name": "awsui-theme",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Charles Stover <awsui-theme@charlesstover.com>",
   "description": "Apply a custom theme to the AWS UI",
   "homepage": "https://www.npmjs.com/package/awsui-theme",

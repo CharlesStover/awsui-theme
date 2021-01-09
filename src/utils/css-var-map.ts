@@ -44,8 +44,6 @@ class CssVarMap {
     for (const cssVar of cssVars) {
       this._pushCssVar(cssVar);
     }
-
-    console.log(this._map);
   }
 
   private _push(camelCase: string, cssVar: string): void {
