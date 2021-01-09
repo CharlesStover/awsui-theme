@@ -15,11 +15,20 @@ describe('useAwsuiTheme', (): void => {
   it('should return CSS variables', (): void => {
     const { result } = renderHook(useAwsuiTheme, {
       initialProps: {
-        backgroundContainerContent: 'red',
+        colorBackgroundContainerContent: 'red',
       },
     });
     expect(result.current.css).toMatch(
       /--color-background-container-content-[\w-]+: red;/,
     );
+  });
+
+  it('should ignore unknown properties', (): void => {
+    const { result } = renderHook(useAwsuiTheme, {
+      initialProps: {
+        ['colorTest' as 'colorBackgroundContainerContent']: 'red',
+      },
+    });
+    expect(result.current.css).toMatch(/{\s*;\s*}/);
   });
 });

@@ -1,17 +1,15 @@
-import { ReactElement, ReactNode } from 'react';
+import { ReactElement, memo, ReactNode } from 'react';
 import Theme from '../../types/theme';
 import * as useAwsuiThemeHook from './awsui-theme.hook';
 
 const { default: useAwsuiTheme } = useAwsuiThemeHook;
 
 interface Props extends Theme {
-  children?: ReactNode;
+  children: ReactNode;
+  [key: string]: ReactNode | string | undefined;
 }
 
-export default function AwsuiTheme({
-  children,
-  ...theme
-}: Props): ReactElement {
+function AwsuiTheme({ children, ...theme }: Props): ReactElement {
   const { className, css } = useAwsuiTheme(theme);
 
   return (
@@ -21,3 +19,5 @@ export default function AwsuiTheme({
     </>
   );
 }
+
+export default memo(AwsuiTheme);

@@ -34,13 +34,21 @@ export default function App() {
 ## API
 
 The `AwsuiTheme` takes any number of props specifying design tokens for your
-theme. To see a full list of supported design tokens, see
-[the Theme interface](https://github.com/CharlesStover/awsui-theme/blob/master/src/types/theme.ts).
-
-The Theme interface is more or less equivalent to the design tokens you would
+theme. These props are more or less equivalent to the design tokens you would
 find in the
 [@awsui/design-tokens](https://www.npmjs.com/package/@awsui/design-tokens)
 package.
+
+With TypeScript support, the known design tokens should auto-complete in your
+development environment. There may be more, unknown design tokens that do not
+auto-complete. You may specify _any_ value as a prop, and the `AwsuiTheme`
+component will attempt to find that design token in the document.
+
+For example, if the CSS variable you want to manipulate is called
+`--color-test-xyz`, but `colorTest` does not auto-complete as a prop, you may
+still specify it anyway: `colorTest="red"`. The component will scan the document
+for CSS variables named `--color-test-xyz` and change those values for all
+child nodes.
 
 An example `AwsuiTheme` implementation that changes the primary action color
 from blue to red may look like this:
@@ -50,7 +58,7 @@ import AwsuiTheme from 'awsui-theme';
 
 export default function App() {
   return (
-    <AwsuiTheme textAccent="red">
+    <AwsuiTheme colorTextAccent="red">
       <Home />
     </AwsuiTheme>
   );

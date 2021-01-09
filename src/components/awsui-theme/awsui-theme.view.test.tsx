@@ -20,7 +20,7 @@ describe('AwsuiTheme', (): void => {
   });
 
   it('should mount a stylesheet', (): void => {
-    const { container } = render(<AwsuiTheme />);
+    const { container } = render(<AwsuiTheme>test</AwsuiTheme>);
     const styleCollection: HTMLCollectionOf<HTMLStyleElement> = container.getElementsByTagName(
       'style',
     );
@@ -32,10 +32,18 @@ describe('AwsuiTheme', (): void => {
   });
 
   it('should wrap its children in a className', (): void => {
-    const { container } = render(<AwsuiTheme />);
+    const { container } = render(<AwsuiTheme>test</AwsuiTheme>);
     const elements: HTMLCollectionOf<Element> = container.getElementsByClassName(
       TEST_CLASS_NAME,
     );
     expect(Array.from(elements)).toHaveLength(1);
+  });
+
+  it('should support ReactNode children', (): void => {
+    render(
+      <AwsuiTheme colorBackgroundButtonLinkActive="#ffffff">
+        <>Test</>
+      </AwsuiTheme>,
+    );
   });
 });
