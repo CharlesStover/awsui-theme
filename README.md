@@ -7,6 +7,13 @@
 The `AwsuiTheme` component allows you to easily apply your brand's theme to your
 [AWS UI components](https://www.npmjs.com/package/@awsui/components-react).
 
+_Looking for **dark mode**?_ Check out
+[`awsui-dark-mode`](https://www.npmjs.com/package/awsui-dark-mode).
+
+- [Install](#install)
+- [Use](#use)
+- [API](#api)
+
 ## Install
 
 - `npm install awsui-theme` or
