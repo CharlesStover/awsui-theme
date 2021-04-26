@@ -1,12 +1,12 @@
 {
   "name": "awsui-theme",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Charles Stover <awsui-theme@charlesstover.com>",
   "description": "Apply a custom theme to the AWS UI",
   "homepage": "https://www.npmjs.com/package/awsui-theme",
   "license": "MIT",
   "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.mjs",
+  "module": "./dist/esm/index.js",
   "repository": "github:CharlesStover/awsui-theme",
   "type": "module",
   "types": "./types/index.d.ts",
@@ -28,7 +28,7 @@
   "publishConfig": {
     "access": "public",
     "main": "./dist/cjs/index.js",
-    "module": "./dist/esm/index.mjs"
+    "module": "./dist/esm/index.js"
   },
   "scripts": {
     "build": "rollup --config",
